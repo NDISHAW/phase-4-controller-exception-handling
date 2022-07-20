@@ -30,10 +30,8 @@ class BirdsController < ApplicationController
   def destroy
     bird = find_bird
     render json: bird
-  end
 
   private
-
   def bird_params
     params.permit(:name, :species, :likes)
   end

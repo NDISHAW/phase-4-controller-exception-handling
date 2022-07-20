@@ -1,6 +1,5 @@
 class BirdsController < ApplicationController
-  rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-
+rescu_
   # GET /birds
   def index
     birds = Bird.all
@@ -30,10 +29,8 @@ class BirdsController < ApplicationController
   def destroy
     bird = find_bird
     render json: bird
-  end
 
   private
-
   def bird_params
     params.permit(:name, :species, :likes)
   end
@@ -43,4 +40,5 @@ class BirdsController < ApplicationController
   def find_bird
     Bird.find(id: params[:id])
   end
+
 end

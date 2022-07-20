@@ -30,7 +30,7 @@ class BirdsController < ApplicationController
   def destroy
     bird = find_bird
     render json: bird
-  end
+    
 
   private
 
